@@ -1,0 +1,77 @@
+﻿<!-- Navigation bar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Products</a>
+        </div>
+
+        <!-- Search and cart -->
+        <div class="navbar-form navbar-right">
+            <div class="form-group">
+                <input type="text" placeholder="Search" class="form-control" ng-model="vm.searchFilter"/>
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <span>{{ vm.getCartElementCount() }}</span>
+                <span>{{ vm.getCartElementCount() === 1 ? 'item' : 'items'}}</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main body -->
+<div class="container">
+    <div class="row">
+
+        <!-- Categories block -->
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Categories</h3></div>
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li ng-class="{'active': vm.isCategoryActive(category)}" ng-repeat="category in vm.categories">
+                            <a href="javascript: " ng-click="vm.selectedCategory=category;">
+                                {{ category.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products block -->
+        <div class="col-md-9">
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Product list</h3>
+                </div>
+
+                <div class="panel-body">
+                    <div  ng-repeat="product in vm.products | filter: vm.filterByCategory() | filter: vm.searchFilter" class="col-md-6">
+                        <div class="panel panel-default">
+
+                            <!-- Product body -->
+                            <div class="panel-body">
+                                <h4>{{ product.title }}</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img style="max-height: 120px; margin-right: 5px" class="img-responsive" src="{{ product.img }}" align="left"/>
+                                        <p style="text-align: justify">{{ product.description }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div style="height: 15px"></div>
+                                        <button ng-click="vm.addToCart(product)" class="btn btn-success">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
