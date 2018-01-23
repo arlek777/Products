@@ -12,7 +12,6 @@
         vm.categories = [];
 
         vm.selectedCategory = null;
-        vm.searchFilter = "";
 
         // methods interfaces
         vm.isCategoryActive = isCategoryActive;
