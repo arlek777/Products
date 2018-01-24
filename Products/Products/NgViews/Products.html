@@ -30,7 +30,7 @@
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked">
                         <li ng-class="{'active': vm.isCategoryActive(category)}" ng-repeat="category in vm.categories">
-                            <a href="javascript: " ng-click="vm.selectedCategory=category;">
+                            <a href="javascript: " ng-click="vm.selectCategory(category)">
                                 {{ category.title }}
                             </a>
                         </li>
