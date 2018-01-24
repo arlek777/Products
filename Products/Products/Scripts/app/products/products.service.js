@@ -26,6 +26,13 @@
                 return response.data;
             });
         }
+        /*
+        function getSearchProducts(searchingProduct) {
+            return $http.get(urls.getProducts + "/" + searchingProduct).then(function (response) {
+                return response.data;
+            });
+        }
+        */
     }
 
 })();
