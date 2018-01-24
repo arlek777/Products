@@ -8,7 +8,7 @@
         <!-- Search and cart -->
         <div class="navbar-form navbar-right">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" ng-model="vm.searchingProduct.title"/>
+                <input type="text" class="form-control" placeholder="Search" ng-model="vm.searchingProduct"/>
             </div>
             <div class="form-group">
                 <span class="glyphicon glyphicon-shopping-cart"></span>
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="panel-body">
-                    <div  ng-repeat="product in vm.products | filter: vm.filterByCategory() | filter: vm.searchingProduct" class="col-md-6">
+                    <div  ng-repeat="product in vm.products | filter: vm.filterByCategory() | filter:{ title: vm.searchingProduct }" class="col-md-6">
                         <div class="panel panel-default">
 
                             <!-- Product body -->

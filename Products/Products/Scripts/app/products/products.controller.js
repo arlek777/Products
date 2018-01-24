@@ -48,13 +48,6 @@
                return vm.selectedCategory && product.category && vm.selectedCategory.title === product.category.title;
            }
         }
-        /*
-        function searchProducts() {
-            productService.getSearchProducts(vm.searchingProduct).then(function (data) {
-                vm.search = data;
-            })
-        }
-        */
     }
 
 })();
