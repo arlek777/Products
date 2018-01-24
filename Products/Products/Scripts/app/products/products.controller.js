@@ -18,6 +18,7 @@
         vm.filterByCategory = filterByCategory;
         vm.addToCart = productCartService.add;
         vm.getCartElementCount = productCartService.getCount;
+        vm.searchingProduct = '';
 
         // methods implementations
         activate();
