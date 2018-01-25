@@ -12,5 +12,11 @@
             controller: "Products",
             controllerAs: "vm"
         });
+
+        $routeProvider.when("/cart", {
+            templateUrl: "NgViews/Cart.html",
+            controller: "CartController",
+            controllerAs: "vm"
+        })
     }
 })();

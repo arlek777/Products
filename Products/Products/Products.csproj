@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -154,6 +155,7 @@
     <Content Include="images\tb.jpg" />
     <Content Include="images\train.jpg" />
     <Content Include="images\wh.jpg" />
+    <Content Include="NgViews\Cart.html" />
     <Content Include="NgViews\Products.html" />
     <Content Include="Scripts\angularjs\angular-cookies.js" />
     <Content Include="Scripts\angularjs\angular-resource.js" />
@@ -168,6 +170,7 @@
     <None Include="Scripts\jquery\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\angularjs\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\cart\cart-controller.js" />
     <Content Include="Scripts\app\products\product-cart.service.js" />
     <Content Include="Scripts\app\products\products.controller.js" />
     <Content Include="Scripts\app\products\products.service.js" />
@@ -216,7 +219,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50042</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50042/</IISUrl>
+          <IISUrl>http://localhost:50044/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
