@@ -11,7 +11,7 @@
                 <input type="text" class="form-control" placeholder="Search" ng-model="vm.searchingProduct"/>
             </div>
             <div class="form-group">
-                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <span>{{ vm.getCartElementCount() }}</span>
                 <span>{{ vm.getCartElementCount() === 1 ? 'item' : 'items'}}</span>
             </div>
