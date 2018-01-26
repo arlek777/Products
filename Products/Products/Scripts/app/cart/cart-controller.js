@@ -8,5 +8,6 @@
         var vm = this;
 
         vm.countProductsInCart = productCartService.getCount;
+        vm.getProductsInCart = productCartService.getProducts();
     }
 })();
