@@ -1,23 +1,44 @@
 ﻿(function() {
     'use strict';
 
-    //TODO in future it can be service for working with server session for storing cart or local storage
     angular.module("app.services").factory("productCartService", productCartService);
 
     function productCartService() {
-        var savedProducts = [];
+        var sessionStorageKey = "products";
 
         return {
             add: add,
             getCount: getCount
         }
 
-        function add(item) {
-            savedProducts.push(item);
+        function add(product) {
+            // Get data from sessionStorage. Data is always a string type.
+            var sessionStorageData = sessionStorage[sessionStorageKey];
+            console.log("SessionStorage: ", sessionStorageData);
+
+            // We need an array but we have a string. We need to convert it to array.
+            // Call angular.fromJson() converts string to object. In our cause it's array.
+            var savedProducts = angular.fromJson(sessionStorageData);
+
+            // If it's first user product, we don't have any sessionStorage. 
+            // So we need to create it.
+            if (typeof savedProducts === 'undefined' || savedProducts === null) {
+                savedProducts = [product];
+            } else {
+                // If it's not first product and sessionStorage exists. We just add new item to our array.
+                savedProducts.push(product);
+            }
+
+            // We need to convert our object array back to string to store in sessionStorage.
+            sessionStorageData = angular.toJson(savedProducts);
+
+            // And put updated array back to session storage.
+            sessionStorage.setItem(sessionStorageKey, sessionStorageData);
         }
 
         function getCount() {
-            return savedProducts.length;
+            // TODO fix it. You need to get proper count from array that stores in sessionStorage
+            return 0;
         }
     }
 })();
