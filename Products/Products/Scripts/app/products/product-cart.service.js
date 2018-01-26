@@ -38,7 +38,14 @@
 
         function getCount() {
             // TODO fix it. You need to get proper count from array that stores in sessionStorage
-            return 0;
+            var sessionStorageData = sessionStorage[sessionStorageKey];
+            var saveProducts = angular.fromJson(sessionStorageData);
+
+            if (typeof saveProducts !== 'undefined') {
+                return saveProducts.length;
+            } else {
+                return 0;
+            }
         }
     }
 })();
