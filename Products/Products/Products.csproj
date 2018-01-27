@@ -171,7 +171,7 @@
     <Content Include="Scripts\angularjs\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\cart\cart-controller.js" />
-    <Content Include="Scripts\app\products\product-cart.service.js" />
+    <Content Include="Scripts\app\cart\cart.service.js" />
     <Content Include="Scripts\app\products\products.controller.js" />
     <Content Include="Scripts\app\products\products.service.js" />
     <Content Include="Scripts\app\app.routes.js" />

@@ -1,10 +1,10 @@
 ﻿(function() {
     'use strict';
 
-    productsController.$inject = ["productsService", "productCartService"];
+    productsController.$inject = ["productsService", "cartService"];
     angular.module("app.controllers").controller("Products", productsController);
 
-    function productsController(productsService, productCartService) {
+    function productsController(productsService, cartService) {
         var vm = this;
 
         // properties
@@ -16,8 +16,8 @@
         // methods interfaces
         vm.isCategoryActive = isCategoryActive;
         vm.filterByCategory = filterByCategory;
-        vm.addToCart = productCartService.add;
-        vm.getCartElementCount = productCartService.getCount;
+        vm.addToCart = cartService.add;
+        vm.getCartElementCount = cartService.getCount;
         vm.searchingProduct = '';
         vm.selectCategory = selectCategory;
 
