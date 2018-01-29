@@ -1,12 +1,13 @@
 ﻿(function() {
     'use strict';
 
-    cartController.$inject = ["productCartService"];
+    cartController.$inject = ["cartService"];
     angular.module("app.controllers").controller("CartController", cartController);
 
-    function cartController(productCartService) {
+    function cartController(cartService) {
         var vm = this;
 
-        vm.countProductsInCart = productCartService.getCount;
+        vm.countProductsInCart = cartService.getCount;
+        vm.getProductsInCart = cartService.getProducts();
     }
 })();

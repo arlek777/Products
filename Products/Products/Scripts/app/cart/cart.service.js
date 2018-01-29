@@ -1,14 +1,15 @@
 ﻿(function() {
     'use strict';
 
-    angular.module("app.services").factory("productCartService", productCartService);
+    angular.module("app.services").factory("cartService", cartService);
 
-    function productCartService() {
+    function cartService() {
         var sessionStorageKey = "products";
 
         return {
             add: add,
-            getCount: getCount
+            getCount: getCount,
+            getProducts: getProducts
         }
 
         function add(product) {
@@ -37,7 +38,6 @@
         }
 
         function getCount() {
-            // TODO fix it. You need to get proper count from array that stores in sessionStorage
             var sessionStorageData = sessionStorage[sessionStorageKey];
             var saveProducts = angular.fromJson(sessionStorageData);
 
@@ -46,6 +46,12 @@
             } else {
                 return 0;
             }
+        }
+
+        function getProducts() {
+            var sessionStorageData = sessionStorage[sessionStorageKey];
+            var saveProducts = angular.fromJson(sessionStorageData);
+            return saveProducts;
         }
     }
 })();

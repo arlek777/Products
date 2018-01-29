@@ -1,4 +1,29 @@
 ﻿<!--Cart div-->
-<div>
-    {{vm.countProductsInCart()}}
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Products</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <table class="table row">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in vm.getProductsInCart">
+                <td><img style="max-height: 120px" class="img-responsive" src="{{product.img}}"/></td>
+                <td>{{product.title}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="well-sm">
+        <h3>All products in cart: {{vm.countProductsInCart()}}</h3>
+    </div>
 </div>
