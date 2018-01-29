@@ -5,5 +5,13 @@
 
     function contactController() {
         var vm = this;
+
+        vm.customer = {
+            fullName: null, adress: null, email: null
+        };
+
+        vm.showAlert = function() {
+            alert("Form is Valid");
+        }
     }
 })();

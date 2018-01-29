@@ -1,2 +1,24 @@
 ﻿<h3>Test Contact</h3>
 <p>Call me: <strong>+380991234567</strong></p>
+<form class="container" name="contactForm">
+    <div class="form-group">
+        <label>Your Full Name:</label>
+        <input type="text" class="form-control" name="inpFullName" ng-model="customer.fullName" 
+               ng-minlength="5" required/>
+        <span style="color:red" ng-if="contactForm.inpFullName.$error.minlength">Not valid name</span>
+    </div>
+    <div class="form-group">
+        <label>Your Adress:</label>
+        <input type="text" class="form-control" name="inpAdress" ng-model="customer.adress" 
+               ng-minlength="5" required/>
+        <span style="color:red" ng-if="contactForm.inpAdress.$error.minlength">Not valid adress</span>
+    </div>
+    <div>
+        <label>Your Email:</label>
+        <input type="email" class="form-control" name="inpEmail" ng-model="customer.email" required/>
+        <span style="color:red" ng-if="contactForm.inpEmail.$error.email">Not valid email</span>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-warning" ng-click="vm.showAlert()">Confirm</button>
+    </div>
+</form>
