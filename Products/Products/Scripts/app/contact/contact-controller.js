@@ -6,6 +6,7 @@
     function contactController() {
         var vm = this;
         vm.checkValidation = true;
+        vm.emailFormat = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
 
         vm.customer = {
             fullName: null,
@@ -33,6 +34,8 @@
                     return "Not valid length";
                 } else if (error.email) {
                     return "Not valid email address";
+                } else if (error.pattern) {
+                    return "Not valid email address pattern";
                 }
             }
         }

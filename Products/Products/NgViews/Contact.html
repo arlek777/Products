@@ -20,7 +20,7 @@
     </div>
     <div>
         <label>Your Email:</label>
-        <input type="email" class="form-control" name="inpEmail" ng-model="customer.email" required/>
+        <input type="email" class="form-control" name="inpEmail" ng-model="customer.email" ng-pattern="vm.emailFormat" required/>
         <span style="color:red" ng-if="vm.checkValidation">{{vm.errorAlert(contactForm.inpEmail.$error)}}</span>
     </div>
     <div class="form-group">
