@@ -16,14 +16,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="product in vm.getProductsInCart">
+            <tr ng-repeat="product in vm.productsInCart">
                 <td><img style="max-height: 120px" class="img-responsive" src="{{product.img}}"/></td>
                 <td>{{product.title}}</td>
                 <td>{{product.description}}</td>
             </tr>
         </tbody>
     </table>
+    <div ng-if="vm.countProductsInCart">
+        <a href="/contact"><button class="btn btn-info">Add Contact</button></a>
+    </div>
     <div class="well-sm">
-        <h3>All products in cart: {{vm.countProductsInCart()}}</h3>
+        <h3>All products in cart: {{vm.countProductsInCart}}</h3>
     </div>
 </div>

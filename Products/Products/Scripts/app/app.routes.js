@@ -17,6 +17,12 @@
             templateUrl: "NgViews/Cart.html",
             controller: "CartController",
             controllerAs: "vm"
-        })
+        });
+
+        $routeProvider.when("/contact", {
+            templateUrl: "NgViews/Contact.html",
+            controller: "ContactController",
+            controllerAs: "vm"
+        });
     }
 })();
