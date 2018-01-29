@@ -28,7 +28,8 @@ namespace Products
                 "~/Scripts/app/products/products.controller.js",
                 "~/Scripts/app/products/products.service.js",
                 "~/Scripts/app/cart/cart.service.js",
-                "~/Scripts/app/cart/cart-controller.js"));
+                "~/Scripts/app/cart/cart-controller.js",
+                "~/Scripts/app/contact/contact-controller.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap/bootstrap.js",

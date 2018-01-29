@@ -7,7 +7,7 @@
     function cartController(cartService) {
         var vm = this;
 
-        vm.countProductsInCart = cartService.getCount;
-        vm.getProductsInCart = cartService.getProducts();
+        vm.countProductsInCart = cartService.getCount();
+        vm.productsInCart = cartService.getProducts();
     }
 })();

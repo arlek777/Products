@@ -156,6 +156,7 @@
     <Content Include="images\train.jpg" />
     <Content Include="images\wh.jpg" />
     <Content Include="NgViews\Cart.html" />
+    <Content Include="NgViews\Contact.html" />
     <Content Include="NgViews\Products.html" />
     <Content Include="Scripts\angularjs\angular-cookies.js" />
     <Content Include="Scripts\angularjs\angular-resource.js" />
@@ -172,6 +173,7 @@
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\cart\cart-controller.js" />
     <Content Include="Scripts\app\cart\cart.service.js" />
+    <Content Include="Scripts\app\contact\contact-controller.js" />
     <Content Include="Scripts\app\products\products.controller.js" />
     <Content Include="Scripts\app\products\products.service.js" />
     <Content Include="Scripts\app\app.routes.js" />
