@@ -23,10 +23,11 @@
             </tr>
         </tbody>
     </table>
-    <div ng-if="vm.countProductsInCart">
-        <a href="/contact"><button class="btn btn-info">Add Contact</button></a>
-    </div>
-    <div class="well-sm">
-        <h3>All products in cart: {{vm.countProductsInCart}}</h3>
+    
+    <div class="form-inline">
+        <div class="form-group row">
+            <label><h3>All products in cart: {{vm.countProductsInCart}}</h3></label>
+            <label style="margin-left: 10px" ng-if="vm.countProductsInCart"><a href="/contact"><button class="btn btn-info">Add Contact</button></a></label>
+        </div>
     </div>
 </div>
