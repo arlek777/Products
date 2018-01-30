@@ -5,25 +5,25 @@
         </div>
     </div>
 </nav>
-<form class="container" name="contactForm">
+<form class="container" name="contactForm" ng-submit="vm.confirmContactForm(contactForm.$valid)">
     <div class="form-group">
         <label>Your Full Name:</label>
         <input type="text" class="form-control" name="inpFullName" ng-model="customer.fullName" 
-               ng-minlength="5" required/>
+               ng-minlength="5" ng-required="true"/>
         <span style="color:red" ng-if="vm.checkValidation">{{vm.errorAlert(contactForm.inpFullName.$error)}}</span>
     </div>
     <div class="form-group">
         <label>Your Address:</label>
         <input type="text" class="form-control" name="inpAddress" ng-model="customer.address" 
-               ng-minlength="5" required/>
+               ng-minlength="5" ng-required="true"/>
         <span style="color:red" ng-if="vm.checkValidation">{{vm.errorAlert(contactForm.inpAddress.$error)}}</span>
     </div>
     <div>
         <label>Your Email:</label>
-        <input type="email" class="form-control" name="inpEmail" ng-model="customer.email" ng-pattern="vm.emailFormat" required/>
+        <input class="form-control" name="inpEmail" ng-model="customer.email" ng-pattern="vm.emailFormat" ng-required="true"/>
         <span style="color:red" ng-if="vm.checkValidation">{{vm.errorAlert(contactForm.inpEmail.$error)}}</span>
     </div>
-    <div class="form-group">
-        <button class="btn btn-warning" ng-click="vm.confirmContact()">Confirm</button>
+    <div style="margin-top: 10px" class="form-group">
+        <button class="btn btn-warning" type="submit">Confirm</button>
     </div>
 </form>
