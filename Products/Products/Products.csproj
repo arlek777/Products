@@ -158,6 +158,7 @@
     <Content Include="NgViews\Cart.html" />
     <Content Include="NgViews\Contact.html" />
     <Content Include="NgViews\Products.html" />
+    <Content Include="NgViews\Summary.html" />
     <Content Include="Scripts\angularjs\angular-cookies.js" />
     <Content Include="Scripts\angularjs\angular-resource.js" />
     <Content Include="Scripts\angularjs\angular-resource.min.js" />
@@ -178,6 +179,7 @@
     <Content Include="Scripts\app\products\products.controller.js" />
     <Content Include="Scripts\app\products\products.service.js" />
     <Content Include="Scripts\app\app.routes.js" />
+    <Content Include="Scripts\app\summary\summary-controller.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\jquery\jquery-3.1.0.js" />
