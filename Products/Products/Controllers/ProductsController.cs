@@ -3,7 +3,6 @@ using Products.Infrastructure;
 
 namespace Products.Controllers
 {
-    // TODO I'm not using Authorization filter for the simplicity. 
     public class ProductsController : ApiController
     {
         [HttpGet]
