@@ -5,7 +5,10 @@
         </div>
     </div>
 </nav>
-<form class="container" name="contactForm" ng-submit="vm.confirmContactForm(contactForm.$valid) && vm.savedContactsCustomer(customer)">
+<div style="margin-bottom: 10px" class="container">
+    <a href="/cart"><button class="btn btn-default">Back</button></a>
+</div>
+<form class="container" name="contactForm" ng-submit="vm.confirmContactForm(contactForm.$valid)">
     <div class="form-group">
         <label>Your Full Name:</label>
         <input type="text" class="form-control" name="inpFullName" ng-model="customer.fullName" 

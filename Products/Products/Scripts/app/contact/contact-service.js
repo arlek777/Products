@@ -12,13 +12,10 @@
 
         function saveContacts(customer) {
             var sessionStorageData = sessionStorage(sessionStorageKey);
-            console.log("IsDATA: ", sessionStorageData);
 
             var savedContacts = angular.fromJson(sessionStorageData);
 
-            if (typeof savedContacts === 'undefined' || savedContacts === null) {
-                savedContacts = customer;
-            }
+            savedContacts = customer;
 
             sessionStorageData = angular.toJson(savedContacts);
             sessionStorage.setItem(sessionStorageKey, sessionStorageData);
