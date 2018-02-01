@@ -1,24 +1,28 @@
 ﻿(function () {
     'use strict';
-    summaryController.$inject = ["cartService"];
+    summaryController.$inject = ["cartService", "contactService"];
     angular.module("app.controllers").controller("SummaryController", summaryController);
 
-    function summaryController(cartService) {
+    function summaryController(cartService, contactService) {
         var vm = this;
         vm.productsInCart = cartService.getProducts();
 
         vm.totalPriceCount = function() {
-            vm.sum = 0;
+            var sum = 0;
 
             for (var i = 0; i < vm.productsInCart.length; i++) {
-                console.log(vm.productsInCart.length);
-                vm.sum += vm.productsInCart[i].price;
+                sum += vm.productsInCart[i].price;
             }
-            return vm.sum;
+            return sum;
         }
 
         vm.confirm = function() {
             alert("TEST click");
+        }
+
+        vm.getContactsCustomer = function () {
+            
+            return contactService.saveContacts(vm.customer);
         }
     }
 })();
