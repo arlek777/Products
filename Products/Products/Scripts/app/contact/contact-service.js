@@ -20,5 +20,11 @@
             sessionStorageData = angular.toJson(savedContacts);
             sessionStorage.setItem(sessionStorageKey, sessionStorageData);
         }
+
+        function getContacts() {
+            var sessionStorageData = sessionStorage[sessionStorageKey];
+            var saveProducts = angular.fromJson(sessionStorageData);
+            return saveProducts;
+        }
     }
 })();

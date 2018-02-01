@@ -6,6 +6,7 @@
     function summaryController(cartService, contactService) {
         var vm = this;
         vm.productsInCart = cartService.getProducts();
+        vm.customerContacts = contactService.getContacts();
 
         vm.totalPriceCount = function() {
             var sum = 0;
@@ -20,9 +21,5 @@
             alert("TEST click");
         }
 
-        vm.getContactsCustomer = function () {
-            
-            return contactService.saveContacts(vm.customer);
-        }
     }
 })();
