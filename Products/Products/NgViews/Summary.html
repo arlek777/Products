@@ -12,9 +12,23 @@
     <table class="table row">
         <thead>
             <tr>
-                <th>test</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
             </tr>
         </thead>
+        <tbody>
+            <tr ng-repeat="product in vm.productsInCart">
+                <td>{{ product.title }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price | currency }}</td>
+            </tr>
+        </tbody>
     </table>
-    <button class="btn btn-info" ng-click="vm.confirm()">Confirm Order</button>
+    <div class="container">
+        <h4><strong>Total Price: {{ vm.totalPriceCount() }}</strong></h4>
+    </div>
+    <div class="container">
+        <button class="btn btn-info" ng-click="vm.confirm()">Confirm Order</button>
+    </div>
 </div>

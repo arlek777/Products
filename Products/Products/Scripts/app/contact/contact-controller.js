@@ -19,7 +19,6 @@
             if (valid) {
                 vm.checkValidation = false;
                 contactService.saveContacts(vm.customer);
-                alert("valid");
                 $location.path("/summary");
             } else {
                 vm.checkValidation = true;
