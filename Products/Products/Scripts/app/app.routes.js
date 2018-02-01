@@ -24,5 +24,11 @@
             controller: "ContactController",
             controllerAs: "vm"
         });
+
+        $routeProvider.when("/summary", {
+            templateUrl: "NgViews/Summary.html",
+            controller: "SummaryController",
+            controllerAs: "vm"
+        });
     }
 })();

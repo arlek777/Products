@@ -1,10 +1,10 @@
 ﻿(function() {
     'use strict';
 
-    contactController.$inject = ["contactService"];
+    contactController.$inject = ["contactService", "$location"];
     angular.module("app.controllers").controller("ContactController", contactController);
 
-    function contactController(contactService) {
+    function contactController(contactService, $location) {
         var vm = this;
         vm.checkValidation = false;
         vm.emailFormat = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
@@ -19,7 +19,7 @@
             if (valid) {
                 vm.checkValidation = false;
                 contactService.saveContacts(vm.customer);
-                alert("valid");
+                $location.path("/summary");
             } else {
                 vm.checkValidation = true;
             }
