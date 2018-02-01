@@ -7,7 +7,8 @@
         var sessionStorageKey = "contacts";
 
         return {
-            saveContacts: saveContacts
+            saveContacts: saveContacts,
+            getContacts: getContacts
         }
 
         function saveContacts(customer) {
@@ -23,8 +24,9 @@
 
         function getContacts() {
             var sessionStorageData = sessionStorage[sessionStorageKey];
-            var saveProducts = angular.fromJson(sessionStorageData);
-            return saveProducts;
+            console.log(sessionStorageData);
+            var saveContacts = angular.fromJson(sessionStorageData);
+            return saveContacts;
         }
     }
 })();
