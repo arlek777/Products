@@ -28,11 +28,28 @@
     <div class="container">
         <h4><strong>Total Price: {{ vm.totalPriceCount() | currency }}</strong></h4>
     </div>
-    <div class="container">
-        <button class="btn btn-info" ng-click="vm.confirm()">Confirm Order</button>
+</div>
+
+<div class="container" style="margin-top: 2%">
+    <h4>Contacts info:</h4>
+    <div class="row">
+        <div class=" panel-group col-sm-3">
+            <div class="panel panel-default" style="text-align:center">
+                <div class="panel-heading">Customer Name</div>
+                <div class="panel-body">{{vm.customerContacts.fullName}}</div>
+            </div>
+            <div class="panel panel-info" style="text-align:center">
+                <div class="panel-heading">Customer Address</div>
+                <div class="panel-body">{{vm.customerContacts.address}}</div>
+            </div>
+            <div class="panel panel-success" style="text-align:center">
+                <div class="panel-heading">Customer email</div>
+                <div class="panel-body">{{vm.customerContacts.email}}</div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="container">
-    <h5>Contacts info:</h5>
-    <div></div>
+
+<div class="container" style="margin-top: 2%">
+    <button class="btn btn-info" ng-click="vm.confirm()">Confirm Order</button>
 </div>
