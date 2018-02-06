@@ -21,16 +21,16 @@
             fullName: vm.customerContacts.fullName,
             address: vm.customerContacts.address,
             email: vm.customerContacts.email,
-            totalPrice: vm.totalPriceCount
+            totalPrice: vm.totalPriceCount()
         }
         
         vm.confirmOrder = function() {
-            summaryService.confirmOrder(customerData).then( function() {
+            summaryService.confirmOrder(customerData).then(function() {
                 contactService.clearContactData();
                 cartService.clearCartData();
                 $location.path("/");
                 alert("Your order was registered");
-            })
+            });
         }
     }
 })();
