@@ -8,12 +8,12 @@
 
         return {
             saveContacts: saveContacts,
-            getContacts: getContacts
+            getContacts: getContacts,
+            clearContactData: clearContactData
         }
 
         function saveContacts(customer) {
             var sessionStorageData = sessionStorage[sessionStorageKey];
-
             var savedContacts = angular.fromJson(sessionStorageData);
 
             savedContacts = customer;
@@ -24,9 +24,12 @@
 
         function getContacts() {
             var sessionStorageData = sessionStorage[sessionStorageKey];
-            console.log(sessionStorageData);
             var saveContacts = angular.fromJson(sessionStorageData);
             return saveContacts;
+        }
+
+        function clearContactData() {
+            sessionStorage.clear();
         }
     }
 })();
