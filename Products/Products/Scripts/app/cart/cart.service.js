@@ -9,7 +9,8 @@
         return {
             add: add,
             getCount: getCount,
-            getProducts: getProducts
+            getProducts: getProducts,
+            clearCartData: clearCartData
         }
 
         function add(product) {
@@ -52,6 +53,10 @@
             var sessionStorageData = sessionStorage[sessionStorageKey];
             var saveProducts = angular.fromJson(sessionStorageData);
             return saveProducts;
+        }
+
+        function clearCartData() {
+            sessionStorage.clear();
         }
     }
 })();
