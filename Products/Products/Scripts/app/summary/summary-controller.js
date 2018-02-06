@@ -17,7 +17,7 @@
             return sum;
         }
 
-        vm.customerData = {
+        var customerData = {
             fullName: vm.customerContacts.fullName,
             address: vm.customerContacts.address,
             email: vm.customerContacts.email,
@@ -25,8 +25,7 @@
         }
         
         vm.confirmOrder = function() {
-            summaryService.confirmOrder(vm.customerData).then( function(data) {
-                vm.customerData = data;
+            summaryService.confirmOrder(customerData).then( function() {
                 contactService.clearContactData();
                 cartService.clearCartData();
                 $location.path("/");
